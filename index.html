@@ -210,6 +210,11 @@ body{
 }
 .stage.active{display:block}
 
+.stage[data-stage="6"] .bonus-area ol > li::before {
+    background: linear-gradient(135deg, var(--purple), #A855F7);
+}
+
+
 @keyframes slide-in{
     from{opacity:0;transform:translateY(18px)}
     to{opacity:1;transform:translateY(0)}
@@ -229,7 +234,6 @@ body{
     color:var(--t2);
     line-height:1.65;
     margin-bottom:32px;
-    max-width:760px;
     font-weight:600;
 }
 
@@ -588,14 +592,14 @@ body{
                 <img src="img/intro.png" alt="Intro">
             </div>
 
-            <p><strong>다양한 AI 모델</strong>과 <strong>응답 모드</strong>를 선택할 수 있는 <strong>Copilot</strong>과 함께, 지금부터 퀘스트를 수행하게 됩니다.<br>빠른 응답부터 깊이 있는 분석 중 상황에 맞게 Copilot을 전략적으로 활용해 보세요!</p>
+            <p><strong>다양한 AI 모델</strong>과 <strong>응답 모드</strong>를 선택할 수 있는 <strong>Copilot</strong>과 함께 지금부터 퀘스트를 수행하게 됩니다.<br>빠른 응답부터 깊이 있는 분석 중 상황에 맞게 Copilot을 전략적으로 활용해 보세요!</p>
             <p>시장 트렌드 탐색, 데이터 분석, 자료 작성, 창의적 기획까지 — 보드게임처럼 즐기는 실습형 여정이 여러분을 기다립니다.</p>
             <p>귀여운 캣파일럿과 함께 6개의 퀘스트를 하나씩 건너며 나만의 식당을 디자인 해보세요.</p>
             <p>동료들과 아이디어를 나누며 더욱 즐겁게 참여해주세요. 🤓</p>
         </div>
 
         <div class="stage" data-stage="1">
-            <p class="stage-title">🔭 Stage 1 &nbsp;|&nbsp; 트렌드를 알아보자!</p>
+            <p class="stage-title">🔭 Stage 1 &nbsp;|&nbsp; 트렌드를 알아보자</p>
             <p class="stage-lead">요즘 핫한 건 뭐지? 이번 스테이지에서는 외식업 트렌드를 빠르게 탐색해봅니다.</p>
 
             <div class="stage-hero">
@@ -607,13 +611,13 @@ body{
             <ol>
                 <li>다음 링크
                     <button class="dl-btn" onclick="window.open('https://livesend.microsoft.com/i/04kuziNUSL3K___sz2uKC7bPau9K0e1jGlhVrMkN2LcwLhu9gikS03PIhFZ9EfETtKTKXzjPJXLJJON8NNkqCFXeAlPofEG___gjNgCul6HypUj8nLxkyA65mJx___PLUSSIGN4mRDhNY','_blank','noopener')">📁 실습파일 다운로드</button>
-                    에서 <em>2026 식품외식산업 7대 이슈.pdf</em>, <em>2025 식품외식산업 7대 이슈.pdf</em> 파일을 다운로드 합니다.
+                    에서 <em>/2026 식품외식산업 7대 이슈.pdf</em>, <em>/2025 식품외식산업 7대 이슈.pdf</em> 파일을 다운로드 합니다.
                 </li>
                 <li><a href="https://m365.cloud.microsoft/chat/" target="_blank">https://m365.cloud.microsoft/chat/</a>을 클릭하여 Copilot Chat으로 이동합니다.</li>
                 <li>Copilot Chat 프롬프트 입력창에서 파일 업로드를 선택하여 다운받은 실습파일을 지정합니다.<br>
                     <img src="img/upload.png" alt="파일 업로드 화면">
                 </li>
-                <li>아래의 샘플 프롬프트를 입력합니다. <em>[대괄호]</em> 부분은 취향에 따라 수정하세요.</li>
+                <li>아래의 샘플 프롬프트를 입력합니다. [대괄호] 부분은 취향에 따라 수정하세요.</li>
                 <li>창의적으로 변경해보면서 마음에 들 때까지 다시 생성해봅니다.</li>
             </ol>
 
@@ -622,7 +626,7 @@ body{
                 <p class="code-desc">외식 산업 리포트 문서를 이해하고 인사이트를 도출합니다.</p>
                 <div class="code-label">샘플 프롬프트</div>
                 <div class="code-box">
-                    <p><em>2026 식품외식산업 7대 이슈.pdf</em>, <em>2025 식품외식산업 7대 이슈.pdf</em> 이 파일에서 주요 이슈별 내용과 언급된 예시들을 요약해서 작성해줘.</p>
+                    <p><em>/2026 식품외식산업 7대 이슈.pdf</em>, <em>/2025 식품외식산업 7대 이슈.pdf</em> 이 파일에서 주요 이슈별 내용과 언급된 예시들을 요약해서 작성해줘.</p>
                     <p>각 연도의 7대 이슈를 한 문장씩 요약하고 이슈별 공통점과 차이점을 표로 정리해줘.</p>
                     <p>2026년과 2025년 이슈 중 [키워드1]과 [키워드2]의 성장률, 시장 규모, 주요 성장 동인 변화를 비교해줘.</p>
                 </div>
@@ -630,7 +634,7 @@ body{
         </div>
 
         <div class="stage" data-stage="2">
-            <p class="stage-title">🧩 Stage 2 &nbsp;|&nbsp; 수집한 정보를 정리하자!</p>
+            <p class="stage-title">🧩 Stage 2 &nbsp;|&nbsp; 정보를 확장하고 정리하자</p>
             <p class="stage-lead">기존 데이터만으로는 부족하다면? 최신 데이터를 추가로 수집하고 보고서 초안을 작성해 봅니다.</p>
 
             <div class="stage-hero">
@@ -640,7 +644,7 @@ body{
             <hr>
 
             <ol>
-                <li>아래 샘플 프롬프트를 이어서 입력합니다. <em>[대괄호]</em> 부분을 취향에 따라 수정하세요.</li>
+                <li>아래 샘플 프롬프트를 이어서 입력합니다. [대괄호] 부분을 취향에 따라 수정하세요.</li>
                 <li>창의적으로 변경해보면서 마음에 들 때까지 다시 생성해 봅니다.</li>
             </ol>
 
@@ -649,8 +653,8 @@ body{
                 <p class="code-desc">웹 데이터를 활용하여 최신 정보를 확인하고 추가 정보를 수집합니다.</p>
                 <div class="code-label">샘플 프롬프트</div>
                 <div class="code-box">
-                    <p>지난 2020년도부터 2023년까지의 식품외식산업 이슈는 어떤 것들이 있었는지 웹데이터를 기반으로 연도별로 정리해줘.</p>
-                    <p>2027년도 키워드도 예측해줘. 그 키워드로 제안할 수 있는 마케팅 전략과 대표적인 성공 사례도 알려줘.</p>
+                    <p>지난 2020년도부터 2024년까지의 식품외식산업 이슈는 어떤 것들이 있었는지 웹데이터를 기반으로 연도별로 정리해줘.</p>
+                    <p>2027년도 키워드 예측해줘. 그 키워드로 제안할 수 있는 마케팅 전략과 대표적인 성공 사례도 알려줘.</p>
                 </div>
 
                 <hr>
@@ -670,7 +674,7 @@ body{
         </div>
 
         <div class="stage" data-stage="3">
-            <p class="stage-title">📊 Stage 3 &nbsp;|&nbsp; 데이터를 분석하자!</p>
+            <p class="stage-title">📊 Stage 3 &nbsp;|&nbsp; 데이터를 분석하자</p>
             <p class="stage-lead">통계 데이터를 기반으로 시장과 상권을 분석하고 인사이트를 도출합니다.</p>
 
             <div class="stage-hero">
@@ -684,9 +688,11 @@ body{
                     <button class="dl-btn" onclick="window.open('https://livesend.microsoft.com/i/04kuziNUSL3K___sz2uKC7bPau9K0e1jGlhVrMkN2LcwLhu9gikS03PIhFZ9EfETtKTKXzjPJXLJJON8NNkqCFXeAlPofEG___gjNgCul6HypUj8nLxkyA65mJx___PLUSSIGN4mRDhNY','_blank','noopener')">📁 실습파일 다운로드</button>
                     에서 <em>서울지역상권데이터.xlsx</em> 파일을 다운로드합니다.
                 </li>
-                <li>Excel을 실행하고 다운로드한 파일을 열어 확인합니다. 본격적으로 Copilot을 사용하기 위해 <strong>복사본 저장(다른 이름으로 저장)</strong>을 선택하여 <strong>OneDrive</strong>에 업로드합니다.</li>
-                <li>Excel에서 Copilot 아이콘을 클릭해 오른쪽 패널을 엽니다. 기본적으로 통합 문서 편집(편집 허용) 상태로 시작해, 필요하면 채팅만으로 바꿔 질문만 할 수도 있습니다.<br>
-                    <img src="img/excel_copilot.png" alt="Excel Copilot">
+                <li>Excel을 실행하고 다운로드한 파일을 열어 확인합니다. 본격적으로 Copilot을 사용하기 위해 복사본 저장(다른 이름으로 저장)을 선택하여 <em>OneDrive</em>에 업로드합니다.<br>
+                    <img src="img/excel_fileupload.png" alt="Excel Copilot1">
+                </li>
+                <li>Excel에서 Copilot 아이콘을 클릭해 오른쪽 패널을 엽니다. 기본적으로 <strong>'통합 문서 편집(편집 허용)'</strong> 상태로 시작하며, 필요하면 '채팅만'으로 바꿔 질문만 할 수도 있습니다.<br>
+                    <img src="img/excel_copilot.png" alt="Excel Copilot2">
                 </li>
                 <li>아래 샘플 프롬프트를 입력합니다.</li>
                 <li>내용을 창의적으로 변경하면서 데이터의 인사이트를 확인합니다.</li>
@@ -709,7 +715,7 @@ body{
             </div>
 
             <ol start="6">
-                <li>Copilot은 다양한 AI 모델을 기반으로, 환경에 따라 <storng>GPT</storng> 또는 <strong>Claude</strong> 모델을 선택하여 답변을 요청할 수 있습니다.</li>
+                <li>Copilot은 다양한 AI 모델을 기반으로, 사용자의 선택에 따라 최신의 <em>GPT</em> 또는 <em>Claude</em> 모델을 선택하여 답변을 요청할 수 있습니다.</li>
                 <li>원하는 응답 스타일과 모델을 지정합니다. 동일한 프롬프트를 여러 모델로 실행해보고 결과 차이를 비교해보세요!<br>
                     <img src="img/model_select.png" alt="모델 선택 화면">
                 </li>
@@ -717,7 +723,7 @@ body{
 
             <div class="code">
                 <div class="code-flag">🚩 데이터 고급 분석하기</div>
-                <p class="code-desc">고급 분석 모드를 수행하여 심층적인 분석을 진행합니다.</p>
+                <p class="code-desc">아래 프롬프트를 통해 심층 분석을 이어갑니다.</p>
                 <div class="code-label">샘플 프롬프트</div>
                 <div class="code-box">
                     <p>유동인구와 3년 생존율 간의 상관관계 시각화</p>
@@ -732,8 +738,8 @@ body{
         </div>
 
         <div class="stage" data-stage="4">
-            <p class="stage-title">🔥 Stage 4 &nbsp;|&nbsp; 인사이트 심화 분석!</p>
-            <p class="stage-lead">한층 더 깊게 파고들기! Copilot Chat을 활용하여 데이터에서 얻은 인사이트를 확장하고 시장, 상권, 타겟 고객을 구체화합니다.</p>
+            <p class="stage-title">🔥 Stage 4 &nbsp;|&nbsp; 인사이트를 더 깊게 분석하자</p>
+            <p class="stage-lead">한층 더 깊은 분석을 위해 Copilot Chat을 활용하여 인사이트를 확장하고 시장, 상권, 타겟 고객을 구체화합니다.</p>
 
             <div class="stage-hero">
                 <img src="img/quest4.png" alt="">
@@ -747,10 +753,10 @@ body{
                     <img src="img/excel_chat.png" alt="Excel Chat">
                 </li>
                 <li>또는 <a href="https://m365.cloud.microsoft/chat/" target="_blank">https://m365.cloud.microsoft/chat/</a>에서 시작해도 됩니다.<br>
-                    문서를 기반으로 답변을 요청할 때는 Copilot Chat 프롬프트 입력창에서 파일 업로드를 선택합니다. Stage 2에서 다운받은 실습파일을 선택합니다.<br>
+                    문서를 기반으로 답변을 요청할 때는 Copilot Chat 프롬프트 입력창에서 <em>"/"를 입력</em>하거나 <em>파일 업로드</em>를 통해 <strong>OneDrive에 저장</strong>된 실습파일을 불러올 수 있습니다.<br>
                     <img src="img/upload.png" alt="파일 업로드">
                 </li>
-                <li>아래 샘플 프롬프트를 이어서 입력합니다. <em>[대괄호]</em> 부분을 취향에 따라 수정하세요.</li>
+                <li>아래 샘플 프롬프트를 이어서 입력합니다. [대괄호] 부분을 취향에 따라 수정하세요.</li>
                 <li>창의적으로 변경해보면서 마음에 들 때까지 다시 생성해 봅니다.</li>
             </ol>
 
@@ -771,7 +777,7 @@ body{
         </div>
 
         <div class="stage" data-stage="5">
-            <p class="stage-title">🎨 Stage 5 &nbsp;|&nbsp; 나만의 식당을 만들어보자!</p>
+            <p class="stage-title">🎨 Stage 5 &nbsp;|&nbsp; 나만의 식당을 만들어보자</p>
             <p class="stage-lead">분석 결과를 바탕으로 나만의 식당 스토리를 구상합니다.</p>
 
             <div class="stage-hero">
@@ -837,7 +843,7 @@ body{
         </div>
 
         <div class="stage" data-stage="6">
-            <p class="stage-title">🌟 Stage 6 &nbsp;|&nbsp; 나의 식당을 소개합니다.</p>
+            <p class="stage-title">🌟 Stage 6 &nbsp;|&nbsp; 나의 식당을 소개합니다</p>
             <p class="stage-lead">모든 준비 완료! 시장 분석, 기획 의도, 메뉴까지 모든 것을 담은 브랜드 기획서를 완성합니다.</p>
 
             <div class="stage-hero">
@@ -851,7 +857,7 @@ body{
                 <li>본문 영역의 또는 우측 하단의 Copilot 아이콘을 선택하여 프롬프트 입력창을 엽니다.<br>
                     <img src="img/word_prompt.png" alt="Word 프롬프트">
                 </li>
-                <li>아래 샘플 프롬프트를 입력합니다. <em>[대괄호]</em> 부분을 취향에 따라 수정하세요.</li>
+                <li>아래 샘플 프롬프트를 입력합니다. [대괄호] 부분을 취향에 따라 수정하세요.</li>
             </ol>
 
             <div class="code">
@@ -875,8 +881,8 @@ body{
                 <div class="code-flag">🚩 기획서 컨텐츠 작성</div>
                 <div class="code-label">샘플 프롬프트</div>
                 <div class="code-box">
-                    <p>(빈 영역에서) 브랜드 개요를 작성하고 싶어. 나의 가게는 [아이디어 설명]과 [차별화 포인트]를 강조하는 브랜드 개요 초안을 전문적이고 간결하게 작성해줘.</p>
-                    <p>(작성된 내용 일부 드래그 -> Copilot으로 편집) 이 내용을 간결하게 요약하고, 글머리 기호로 다시 작성해줘.</p>
+                    <p><strong>(빈 영역에서)</strong> 브랜드 개요를 작성하고 싶어. 나의 가게는 [아이디어 설명]과 [차별화 포인트]를 강조하는 브랜드 개요 초안을 전문적이고 간결하게 작성해줘.</p>
+                    <p><strong>(작성된 내용 일부 드래그 -> Copilot으로 편집)</strong> 이 내용을 간결하게 요약하고, 글머리 기호로 다시 작성해줘.</p>
                 </div>
             </div>
 
@@ -891,11 +897,11 @@ body{
             <div class="note note-bonus">
                 <strong>🎁 Bonus Stage</strong> &nbsp;기획서가 완성되면 나만의 가게를 소개하는 <strong>프리젠테이션</strong>을 생성합니다!
             </div>
-
+            <div class="bonus-area">
             <ol>
                 <li>PowerPoint를 실행하여 새로 만들기 → 빈 프리젠테이션을 선택합니다.</li>
-                <li>빈 슬라이드의 Copilot 아이콘을 선택 후 <em>프리젠테이션 만들기</em>를 선택합니다.</li>
-                <li>프롬프트 입력창에 <em>/</em> 입력 후, 워드로 작성한 기획서를 선택하거나 파일을 첨부해 프롬프트를 작성합니다.<br>
+                <li>빈 슬라이드의 Copilot 아이콘을 선택 후 <strong>프리젠테이션 만들기</strong>를 선택합니다.</li>
+                <li>프롬프트 입력창에 "/" 입력 후, 워드로 작성한 기획서를 선택하거나 파일을 첨부해 프롬프트를 작성합니다.<br>
                     <img src="img/ppt_create.png" alt="PPT 생성">
                 </li>
             </ol>
@@ -913,12 +919,13 @@ body{
 
             <ol start="4">
                 <li>Copilot이 생성한 구조를 확인하고, 추가 또는 삭제를 선택하여 아젠다를 확정합니다.</li>
-                <li>특정 슬라이드에서 이미지를 생성하려면 Copilot Chat 패널을 열어 프롬프트 입력창에 원하는 이미지를 요청합니다. 이 때에도 이미지 모델을 선택할 수 있습니다.<br>
+                <li>특정 슬라이드에서 이미지를 생성하려면 Copilot Chat 패널을 열고, 프롬프트 입력창에 원하는 이미지를 요청합니다. 필요에 따라 <strong>이미지 모델도 직접 선택</strong>할 수 있습니다.<br>
                     <img src="img/ppt_chat.png" alt="PPT Chat">
                 </li>
-                <li>생성된 이미지를 확인하고 <em>삽입</em>을 선택하여 슬라이드에 바로 추가합니다.</li>
+                <li>생성된 이미지를 확인하고 슬라이드에 바로 추가합니다.</li>
                 <li>Copilot chat 패널에 열려있는 프레젠테이션을 바탕으로 오프닝 멘트, Q&A 작성도 요청할 수 있습니다.</li>
             </ol>
+        </div>
         </div>
 
         <div class="stage" data-stage="7">
@@ -1035,6 +1042,13 @@ $(function () {
 
         renderTabs();
         renderDots();
+
+        // ✅ stage 1부터 header 숨기기
+        if (cur === 0) {
+            $('.header').show();
+        } else {
+            $('.header').hide();
+        }
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
